@@ -12,7 +12,7 @@ resource "aws_security_group_rule" "sg_rules" {
     from_port           = var.sg_rules[count.index].from_port
     to_port             = var.sg_rules[count.index].to_port
     protocol            = var.sg_rules[count.index].protocol
-    cidr_blocks         = var.sg_rules[count.index].cidr_blocks
+    cidr_blocks         = [var.sg_rules[count.index].cidr_blocks]
     description         = var.sg_rules[count.index].description
     security_group_id   = var.sg_rules[count.index].security_group_id
 
