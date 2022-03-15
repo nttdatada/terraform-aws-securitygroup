@@ -6,6 +6,6 @@
 output "security_group_id" {    
     
     description = "AWS Security Group ID"
-    value       = values(aws_security_group.security_group).*.id 
+    value       = aws_security_group.security_group.id 
 }
 
